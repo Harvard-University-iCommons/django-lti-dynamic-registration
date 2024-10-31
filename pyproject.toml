@@ -9,8 +9,8 @@ dependencies = [
     "django>=5.0",  # Replace "X.Y" as appropriate
     "django-lti>=0.5.0",
 ]
-description = "A Django app to conduct web-based polls."
-readme = "README.rst"
+description = "Add-on to django-lti to support dynamic registration."
+readme = "README.md"
 requires-python = ">= 3.10"
 authors = [
     {name = "Your Name", email = "yourname@example.com"},
