@@ -1,25 +1,7 @@
 import json
-from enum import Enum
 from typing import Any, Dict, List, Optional, Sequence
 
-
-class CanvasVisibility(str, Enum):
-    PUBLIC = "public"
-    ADMINS = "admins"
-    MEMBERS = "members"
-
-    def __str__(self) -> str:
-        return self.value
-
-
-class CanvasPrivacyLevel(str, Enum):
-    ANONYMOUS = "anonymous"
-    NAME_ONLY = "name_only"
-    EMAIL_ONLY = "email_only"
-    PUBLIC = "public"
-
-    def __str__(self) -> str:
-        return self.value
+from .constants import CanvasPrivacyLevel, CanvasVisibility
 
 
 # https://www.imsglobal.org/spec/lti-dr/v1p0#lti-message
