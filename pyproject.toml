@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "django-lti-dynamic-registration"
-version = "0.1"
+version = "0.1.1"
 dependencies = [
     "django>=4.2",
     "django-lti>=0.5.0",
