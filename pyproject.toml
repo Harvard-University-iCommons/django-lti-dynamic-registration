@@ -13,7 +13,7 @@ description = "Add-on to django-lti to support dynamic registration."
 readme = "README.md"
 requires-python = ">= 3.10"
 authors = [
-    {name = "Your Name", email = "yourname@example.com"},
+    {name = "Harvard University Academic Technology", email = "academictechnology@harvard.edu"},
 ]
 classifiers = [
     "Environment :: Web Environment",
@@ -36,4 +36,4 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://huit.harvard.edu/"
+Homepage = "https://github.com/Harvard-University-iCommons/django-lti-dynamic-registration"
