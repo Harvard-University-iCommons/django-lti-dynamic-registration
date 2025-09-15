@@ -59,7 +59,14 @@ class DynamicRegistrationBaseView(View):
                 "Content-Type": "application/json",
             },
         )
-        response.raise_for_status()
+
+        try:
+            response.raise_for_status()
+        except requests.exceptions.HTTPError as e:
+            print("Status:", e.response.status_code)
+            print("Reason:", e.response.reason)
+            print("Body:", e.response.text)
+            raise
 
         response_data = response.json()
         client_id = response_data["client_id"]
