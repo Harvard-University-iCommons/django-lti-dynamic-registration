@@ -1,3 +1,4 @@
+import uuid
 import requests
 from django.http import HttpResponse
 from django.views import View
@@ -68,12 +69,15 @@ class DynamicRegistrationBaseView(View):
     def register_platform_in_tool(
         self, consumer_name: str, openid_config: dict
     ) -> LtiRegistration:
+        temp_client_id = f"temporary-{uuid.uuid4()}"
+        
         reg = LtiRegistration(
             name=consumer_name,
             issuer=openid_config["issuer"],
             auth_url=openid_config["authorization_endpoint"],
             token_url=openid_config["token_endpoint"],
             keyset_url=openid_config["jwks_uri"],
+            client_id=temp_client_id,
         )
         reg.save()
         return reg
